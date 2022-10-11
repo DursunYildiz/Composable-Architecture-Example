@@ -7,13 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		161C633628F58F0C00515F53 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 161C633528F58F0C00515F53 /* .swiftlint.yml */; };
+		161C633728F58F0C00515F53 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 161C633528F58F0C00515F53 /* .swiftlint.yml */; };
+		161C633828F58F0C00515F53 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 161C633528F58F0C00515F53 /* .swiftlint.yml */; };
 		16C44D5328F44BB2004350E4 /* ComposableExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C44D5228F44BB2004350E4 /* ComposableExampleApp.swift */; };
-		16C44D5528F44BB2004350E4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C44D5428F44BB2004350E4 /* ContentView.swift */; };
+		16C44D5528F44BB2004350E4 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C44D5428F44BB2004350E4 /* LoginView.swift */; };
 		16C44D5728F44BB3004350E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16C44D5628F44BB3004350E4 /* Assets.xcassets */; };
 		16C44D5B28F44BB3004350E4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16C44D5A28F44BB3004350E4 /* Preview Assets.xcassets */; };
 		16C44D6528F44BB4004350E4 /* ComposableExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C44D6428F44BB4004350E4 /* ComposableExampleTests.swift */; };
 		16C44D6F28F44BB4004350E4 /* ComposableExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C44D6E28F44BB4004350E4 /* ComposableExampleUITests.swift */; };
 		16C44D7128F44BB4004350E4 /* ComposableExampleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C44D7028F44BB4004350E4 /* ComposableExampleUITestsLaunchTests.swift */; };
+		16C44D7F28F44BF9004350E4 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 16C44D7E28F44BF9004350E4 /* ComposableArchitecture */; };
+		16C44D8328F4606E004350E4 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C44D8228F4606E004350E4 /* MainView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +39,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		161C633528F58F0C00515F53 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		16C44D4F28F44BB2004350E4 /* ComposableExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ComposableExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16C44D5228F44BB2004350E4 /* ComposableExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposableExampleApp.swift; sourceTree = "<group>"; };
-		16C44D5428F44BB2004350E4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		16C44D5428F44BB2004350E4 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		16C44D5628F44BB3004350E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		16C44D5828F44BB3004350E4 /* ComposableExample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ComposableExample.entitlements; sourceTree = "<group>"; };
 		16C44D5A28F44BB3004350E4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -45,6 +51,7 @@
 		16C44D6A28F44BB4004350E4 /* ComposableExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ComposableExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		16C44D6E28F44BB4004350E4 /* ComposableExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposableExampleUITests.swift; sourceTree = "<group>"; };
 		16C44D7028F44BB4004350E4 /* ComposableExampleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposableExampleUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		16C44D8228F4606E004350E4 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16C44D7F28F44BF9004350E4 /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +83,7 @@
 		16C44D4628F44BB2004350E4 = {
 			isa = PBXGroup;
 			children = (
+				161C633528F58F0C00515F53 /* .swiftlint.yml */,
 				16C44D5128F44BB2004350E4 /* ComposableExample */,
 				16C44D6328F44BB4004350E4 /* ComposableExampleTests */,
 				16C44D6D28F44BB4004350E4 /* ComposableExampleUITests */,
@@ -96,10 +105,11 @@
 			isa = PBXGroup;
 			children = (
 				16C44D5228F44BB2004350E4 /* ComposableExampleApp.swift */,
-				16C44D5428F44BB2004350E4 /* ContentView.swift */,
+				16C44D5428F44BB2004350E4 /* LoginView.swift */,
 				16C44D5628F44BB3004350E4 /* Assets.xcassets */,
 				16C44D5828F44BB3004350E4 /* ComposableExample.entitlements */,
 				16C44D5928F44BB3004350E4 /* Preview Content */,
+				16C44D8228F4606E004350E4 /* MainView.swift */,
 			);
 			path = ComposableExample;
 			sourceTree = "<group>";
@@ -139,12 +149,16 @@
 				16C44D4B28F44BB2004350E4 /* Sources */,
 				16C44D4C28F44BB2004350E4 /* Frameworks */,
 				16C44D4D28F44BB2004350E4 /* Resources */,
+				161C633328F58D7C00515F53 /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = ComposableExample;
+			packageProductDependencies = (
+				16C44D7E28F44BF9004350E4 /* ComposableArchitecture */,
+			);
 			productName = ComposableExample;
 			productReference = 16C44D4F28F44BB2004350E4 /* ComposableExample.app */;
 			productType = "com.apple.product-type.application";
@@ -217,6 +231,10 @@
 				Base,
 			);
 			mainGroup = 16C44D4628F44BB2004350E4;
+			packageReferences = (
+				16C44D7D28F44BF9004350E4 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+				161C633428F58DEE00515F53 /* XCRemoteSwiftPackageReference "SwiftLint" */,
+			);
 			productRefGroup = 16C44D5028F44BB2004350E4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -233,6 +251,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				161C633628F58F0C00515F53 /* .swiftlint.yml in Resources */,
 				16C44D5B28F44BB3004350E4 /* Preview Assets.xcassets in Resources */,
 				16C44D5728F44BB3004350E4 /* Assets.xcassets in Resources */,
 			);
@@ -242,6 +261,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				161C633728F58F0C00515F53 /* .swiftlint.yml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,17 +269,40 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				161C633828F58F0C00515F53 /* .swiftlint.yml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		161C633328F58D7C00515F53 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n# Type a script or drag a script file from your workspace to insert its path.\n\nif [ $ENABLE_PREVIEWS == \"NO\" ]\nthen\n  # your code to execute here\n  swiftlint --fix && swiftlint\nelse\n  echo \"Skipping the script because of preview mode\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		16C44D4B28F44BB2004350E4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				16C44D5528F44BB2004350E4 /* ContentView.swift in Sources */,
+				16C44D8328F4606E004350E4 /* MainView.swift in Sources */,
+				16C44D5528F44BB2004350E4 /* LoginView.swift in Sources */,
 				16C44D5328F44BB2004350E4 /* ComposableExampleApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -612,6 +655,33 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		161C633428F58DEE00515F53 /* XCRemoteSwiftPackageReference "SwiftLint" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/SwiftLint.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.2;
+			};
+		};
+		16C44D7D28F44BF9004350E4 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		16C44D7E28F44BF9004350E4 /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 16C44D7D28F44BF9004350E4 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 16C44D4728F44BB2004350E4 /* Project object */;
 }
