@@ -55,12 +55,14 @@ struct LoginViewAppState: Equatable {
     @BindableState var userName: String = ""
     var password: String = ""
     var isLoading: Bool = false
+    
 }
 
 enum LoginViewAction: BindableAction {
     case binding(BindingAction<LoginViewAppState>)
     case login
     case changePassword(String)
+    case changeLoading(Bool)
 }
 
 struct LoginViewEnvironment {
@@ -71,14 +73,16 @@ let loginViewReducer = Reducer<LoginViewAppState, LoginViewAction, LoginViewEnvi
 
     switch action {
     case .login:
-
-        state.isLoading.toggle()
-
         return .none
     case .binding:
         return .none
     case let .changePassword(text):
         state.password = text
+        return .none
+
+    case let .changeLoading(status):
+        state.isLoading = status
+
         return .none
     }
 
