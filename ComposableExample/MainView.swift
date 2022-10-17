@@ -9,7 +9,7 @@ import SwiftUI
 import ComposableArchitecture
 
 struct MainView: View {
-    let store: Store<LoginViewAppState, LoginViewAction>
+    let store: Store<LoginDomain.State, LoginDomain.Action>
     var body: some View {
         WithViewStore(store) { viewStore in
             Text(viewStore.userName)

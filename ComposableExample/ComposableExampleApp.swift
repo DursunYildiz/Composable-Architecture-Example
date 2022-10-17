@@ -12,8 +12,10 @@ struct ComposableExampleApp: App {
     var body: some Scene {
         WindowGroup {
             LoginView(store: Store(
-                initialState: LoginViewAppState(),
-                reducer: loginViewReducer, environment: LoginViewEnvironment(mainQueue: .main)))
+                initialState: LoginDomain.State(),
+                reducer: LoginDomain.reducer,
+                environment: LoginDomain.Environment(mainQueue: .main,
+                                                     service: AuthServiceImplement())))
         }
     }
 }

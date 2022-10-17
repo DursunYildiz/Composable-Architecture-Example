@@ -8,17 +8,18 @@
 import ComposableArchitecture
 import SwiftUI
 struct LoginView: View {
-    let store: Store<LoginViewAppState, LoginViewAction>
-
+    let store: Store<LoginDomain.State, LoginDomain.Action>
+    let action = LoginDomain.Action.self
     var body: some View {
         NavigationView {
             WithViewStore(store) { viewStore in
                 VStack(spacing: 24) {
-                    TextField("User Name", text: viewStore.binding(\.$userName))
+                    TextField("User Name",
+                              text: viewStore.binding(get: \.userName, send: action.changeUserName))
                         .modifier(BackgroundModifier(color: .purple.opacity(0.2)))
                     TextField(
                         "Password",
-                        text: viewStore.binding(get: \.password, send: LoginViewAction.changePassword)
+                        text: viewStore.binding(get: \.password, send: action.changePassword)
                     )
                     .modifier(BackgroundModifier(color: .blue.opacity(0.5)))
                     Button {
@@ -26,9 +27,10 @@ struct LoginView: View {
 
                     } label: {
                         Text("Login")
+                            .frame(maxWidth: .infinity)
+                            .modifier(BackgroundModifier(color: .orange))
                     }
-                    .frame(maxWidth: .infinity)
-                    .modifier(BackgroundModifier(color: .orange))
+
                 }
                 .padding()
                 .blur(radius: viewStore.isLoading ? 1 : 0)
@@ -46,47 +48,11 @@ struct LoginView: View {
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView(store: Store(initialState: LoginViewAppState(),
-                               reducer: loginViewReducer, environment: LoginViewEnvironment(mainQueue: .main)))
+        LoginView(store: Store(initialState: LoginDomain.State(),
+                               reducer: LoginDomain.reducer,
+                               environment: LoginDomain.Environment(mainQueue: .main, service: AuthServiceMock())))
     }
 }
-
-struct LoginViewAppState: Equatable {
-    @BindableState var userName: String = ""
-    var password: String = ""
-    var isLoading: Bool = false
-    
-}
-
-enum LoginViewAction: BindableAction {
-    case binding(BindingAction<LoginViewAppState>)
-    case login
-    case changePassword(String)
-    case changeLoading(Bool)
-}
-
-struct LoginViewEnvironment {
-    var mainQueue: AnySchedulerOf<DispatchQueue>
-}
-
-let loginViewReducer = Reducer<LoginViewAppState, LoginViewAction, LoginViewEnvironment> { state, action, _ in
-
-    switch action {
-    case .login:
-        return .none
-    case .binding:
-        return .none
-    case let .changePassword(text):
-        state.password = text
-        return .none
-
-    case let .changeLoading(status):
-        state.isLoading = status
-
-        return .none
-    }
-
-}.binding()
 
 struct BackgroundModifier: ViewModifier {
     let color: Color
